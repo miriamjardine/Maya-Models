@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Crocy.ma
-//Last modified: Mon, Jan 16, 2023 12:58:13 PM
+//Last modified: Mon, Jan 16, 2023 01:27:15 PM
 //Codeset: 1252
 requires maya "2023";
 requires "mtoa" "5.1.2";
@@ -10,17 +10,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202205052215-234554116d";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 22621)";
-fileInfo "UUID" "5ACA80C4-4FEE-8050-324A-CB960207E70A";
+fileInfo "UUID" "AC6E84A6-4519-AC1C-6924-D28D7EAC696F";
 createNode transform -s -n "persp";
 	rename -uid "E6FF4934-4D29-B4FA-C06F-D3ADFB5BE303";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -14.850171549662649 22.133512051041819 0.53102939470771371 ;
-	setAttr ".r" -type "double3" -57.338352726246754 -2963.3999999978751 0 ;
+	setAttr ".t" -type "double3" -5.7331016632625129 24.142728028784543 -2.8749405872580382 ;
+	setAttr ".r" -type "double3" -104.1383527101782 -2824.1999999999935 -1.6975531425343552e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "728FC06E-4EF7-3EAD-EC17-D3B243F2AD4F";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 26.216738185923198;
+	setAttr ".coi" 26.216738185927998;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -488,70 +488,340 @@ createNode joint -n "ROOT_Jnt";
 	setAttr ".t" -type "double3" -5.1743745261561793 0 5.8453373768006074 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jot" -type "string" "none";
 	setAttr ".radi" 0.5;
 createNode joint -n "COG_Jnt" -p "ROOT_Jnt";
 	rename -uid "75AE8C0F-4A8D-5D19-8C70-888466374EE0";
-	setAttr ".t" -type "double3" 5.1175132676269914 0 -5.7771038665655805 ;
+	setAttr ".t" -type "double3" 5.1175132676269914 0 -5.7771038665655778 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0 -88.919075813339347 0 ;
+	setAttr ".jo" -type "double3" 0 -88.919075813339333 0 ;
 	setAttr ".radi" 0.51063827064719203;
 createNode joint -n "Tail_01_Jnt" -p "COG_Jnt";
 	rename -uid "8B2DB27C-4F6E-FC48-B95C-24A279C2C0D0";
-	setAttr ".t" -type "double3" 1.2056732325123796 0 4.163336342344337e-17 ;
+	setAttr ".t" -type "double3" 1.2056732325123798 -3.2710183435050606e-16 2.383830226264435e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0 1.1648183792343376 0 ;
+	setAttr ".jo" -type "double3" 0 1.1648183792346505 0 ;
 	setAttr ".radi" 0.50832041065413902;
 createNode joint -n "Tail_02_Jnt" -p "Tail_01_Jnt";
 	rename -uid "46F84671-4A70-407A-9213-469089F40522";
-	setAttr ".t" -type "double3" 1.1608612726466883 0 -3.3237301799715624e-15 ;
+	setAttr ".t" -type "double3" 1.1608612726466883 -3.7327460306768961e-16 3.7165487501495967e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0 -3.4911068326634167 0 ;
+	setAttr ".jo" -type "double3" 0 -3.4911068326637338 0 ;
 	setAttr ".radi" 0.50240488020336527;
 createNode joint -n "Tail_03_Jnt" -p "Tail_02_Jnt";
 	rename -uid "B1985C13-4033-AF2D-C496-2092C9B5EC6C";
-	setAttr ".t" -type "double3" 1.0464943505983944 0 -6.7654215563095477e-16 ;
+	setAttr ".t" -type "double3" 1.0464943505983939 -6.1702460751347352e-16 -1.0068559507094539e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 2.3262884534290862 0 ;
 	setAttr ".radi" 0.51063827064719203;
 createNode joint -n "Tail_04_Jnt" -p "Tail_03_Jnt";
 	rename -uid "E6F01AFD-41FB-41A4-0224-96A267DB165E";
-	setAttr ".t" -type "double3" 1.2056732325123791 0 -1.4953316362920077e-15 ;
+	setAttr ".t" -type "double3" 1.2056732325123789 -5.0770013917706969e-16 -1.2154134076507359e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 -1.0809241866605732 0 ;
 	setAttr ".radi" 0.51533293247235368;
 createNode joint -n "Tail_05_Jnt" -p "Tail_04_Jnt";
 	rename -uid "6872AFCB-4B8E-5ABB-8156-BEA8C921B4E8";
-	setAttr ".t" -type "double3" 1.2964366944655044 0 1.9074040847325342e-15 ;
+	setAttr ".t" -type "double3" 1.2964366944655048 -6.6155628871707139e-16 2.2537437967596248e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0 89.999999999999901 0 ;
+	setAttr ".jot" -type "string" "none";
 	setAttr ".radi" 0.7064420918409855;
 createNode joint -n "Snout_01_Jnt" -p "COG_Jnt";
 	rename -uid "07A623E7-4849-A674-A2B9-A493B51E3074";
-	setAttr ".t" -type "double3" 0.022740455986888689 0 0.00042906520729977388 ;
+	setAttr ".t" -type "double3" 0.022740455986888692 -6.0014376782149672e-18 0.00042906520729977767 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0 179.56282152751476 0 ;
+	setAttr ".jo" -type "double3" 0 178.91907581333942 0 ;
 	setAttr ".radi" 0.55298561608873487;
 createNode joint -n "Snout_02_Jnt" -p "Snout_01_Jnt";
 	rename -uid "239C917C-4DF9-A2FB-DAD4-619FF8F2F9BE";
-	setAttr ".t" -type "double3" 2.8201404119753466 0 0.031686970921072581 ;
+	setAttr ".t" -type "double3" 3.0196898403800536 9.0062942841068973e-16 1.1232486907862462e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0 -0.64374571417553039 0 ;
 	setAttr ".radi" 0.60003660035031758;
 createNode joint -n "Snout_03_Jnt" -p "Snout_02_Jnt";
 	rename -uid "F9C807C8-408A-DD79-FB21-D6A7FA1866C4";
-	setAttr ".t" -type "double3" 2.9340409401061387 0 -6.0645932720149176e-15 ;
+	setAttr ".t" -type "double3" 2.9340409401061374 7.8078754782770974e-16 1.9017693241104869e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0 -89.999999999999872 0 ;
+	setAttr ".jot" -type "string" "none";
 	setAttr ".radi" 0.60003660035031758;
+createNode transform -n "ROOT_Ctrl_Grp";
+	rename -uid "0ACF12C3-4117-82D1-B03C-4FBE851BA1CC";
+createNode transform -n "ROOT_Ctrl" -p "ROOT_Ctrl_Grp";
+	rename -uid "82FADA81-4117-1CD7-9CED-3C86EEE66E66";
+	setAttr ".t" -type "double3" -5.1612302876941172 0 5.8379031124992382 ;
+	setAttr ".s" -type "double3" 0.75 0.75 0.75 ;
+createNode nurbsCurve -n "ROOT_CtrlShape" -p "ROOT_Ctrl";
+	rename -uid "E95CAB2B-451C-FC9A-21B7-6CA5737C7EC6";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		-1.1081941875543881 3.5177356190060272e-33 -5.7448982375248304e-17
+		-0.78361162489122449 -4.7982373409884725e-17 0.78361162489122449
+		-1.1100856969603225e-16 -6.7857323231109171e-17 1.1081941875543884
+		0.78361162489122449 -4.7982373409884719e-17 0.78361162489122438
+		1.1081941875543881 -9.2536792101100989e-33 1.511240500779959e-16
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		;
+createNode transform -n "COG_Ctrl_Grp" -p "ROOT_Ctrl";
+	rename -uid "200FBFA7-40EF-CF37-47A3-3789636CB412";
+	setAttr ".t" -type "double3" 6.8816403835921562 0 -7.7838708166656509 ;
+	setAttr ".s" -type "double3" 1.3333333333333333 1.3333333333333333 1.3333333333333333 ;
+createNode transform -n "COG_Ctrl" -p "COG_Ctrl_Grp";
+	rename -uid "D6DED446-43C8-CBF3-6430-83996D653E77";
+	setAttr ".t" -type "double3" -0.11726554440863612 0 0.068890682110389179 ;
+	setAttr ".r" -type "double3" 90 0 0 ;
+	setAttr ".s" -type "double3" 1.5 1 1 ;
+createNode nurbsCurve -n "COG_CtrlShape" -p "COG_Ctrl";
+	rename -uid "A8B70FAE-4D9B-C6F9-D2FD-87B5AC319CAC";
+	setAttr -k off ".v";
+	setAttr ".tw" yes;
+createNode transform -n "Tail_01_Ctrl_Grp" -p "COG_Ctrl";
+	rename -uid "C94517FA-4141-A656-81B3-9F8A40700337";
+	setAttr ".t" -type "double3" 0.078177029605757412 -0.068890682110389179 0 ;
+	setAttr ".r" -type "double3" -90 0 0 ;
+	setAttr ".s" -type "double3" 0.66666666666666663 1 1 ;
+createNode transform -n "Tail_01_Ctrl" -p "Tail_01_Ctrl_Grp";
+	rename -uid "6A46AE83-4DF0-895F-9163-F28AF6720C6A";
+	setAttr ".t" -type "double3" -0.11726554440863612 0 1.2019174441433711 ;
+	setAttr ".r" -type "double3" 90 0 0 ;
+	setAttr ".s" -type "double3" 1.5 1 1 ;
+createNode nurbsCurve -n "Tail_01_CtrlShape" -p "Tail_01_Ctrl";
+	rename -uid "C38D94EF-441A-1ABE-F8D3-93B87212EDCD";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		-1.1081941875543881 3.5177356190060272e-33 -5.7448982375248304e-17
+		-0.78361162489122449 -4.7982373409884725e-17 0.78361162489122449
+		-1.1100856969603225e-16 -6.7857323231109171e-17 1.1081941875543884
+		0.78361162489122449 -4.7982373409884719e-17 0.78361162489122438
+		1.1081941875543881 -9.2536792101100989e-33 1.511240500779959e-16
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		;
+createNode transform -n "Tail_02_Ctrl_Grp" -p "Tail_01_Ctrl";
+	rename -uid "CDE048D1-4001-5359-97F2-5B9FBF8B2206";
+	setAttr ".t" -type "double3" 0.078177029605757412 -1.2019174441433711 0 ;
+	setAttr ".r" -type "double3" -90 0 0 ;
+	setAttr ".s" -type "double3" 0.66666666666666663 1 1 ;
+createNode transform -n "Tail_02_Ctrl" -p "Tail_02_Ctrl_Grp";
+	rename -uid "D31A842E-4D76-3752-2C5F-2DBC87A3DA1D";
+	setAttr ".t" -type "double3" -0.11726554440863612 0 2.3599290066449492 ;
+	setAttr ".r" -type "double3" 90 0 0 ;
+	setAttr ".s" -type "double3" 1.5 1 1 ;
+createNode nurbsCurve -n "Tail_02_CtrlShape" -p "Tail_02_Ctrl";
+	rename -uid "AD2CB819-4B25-FE49-B7E0-12BEE3CE4BD4";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		-1.1081941875543881 3.5177356190060272e-33 -5.7448982375248304e-17
+		-0.78361162489122449 -4.7982373409884725e-17 0.78361162489122449
+		-1.1100856969603225e-16 -6.7857323231109171e-17 1.1081941875543884
+		0.78361162489122449 -4.7982373409884719e-17 0.78361162489122438
+		1.1081941875543881 -9.2536792101100989e-33 1.511240500779959e-16
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		;
+createNode transform -n "Tail_03_Ctrl_Grp" -p "Tail_02_Ctrl";
+	rename -uid "847E88CE-4512-A91B-61F9-B7A30784CCE9";
+	setAttr ".t" -type "double3" 0.078177029605757412 -2.3599290066449492 0 ;
+	setAttr ".r" -type "double3" -90 0 0 ;
+	setAttr ".s" -type "double3" 0.66666666666666663 1 1 ;
+createNode transform -n "Tail_03_Ctrl" -p "Tail_03_Ctrl_Grp";
+	rename -uid "8AAD687D-4010-65DB-DD28-DFAAC084B675";
+	setAttr ".t" -type "double3" -0.11726554440863612 0 3.3609886496751749 ;
+	setAttr ".r" -type "double3" 90 0 0 ;
+	setAttr ".s" -type "double3" 0.75 0.75 0.75 ;
+createNode nurbsCurve -n "Tail_03_CtrlShape" -p "Tail_03_Ctrl";
+	rename -uid "52CA7E2D-45B6-FA92-642A-B1828DCA8E2F";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		-1.1081941875543881 3.5177356190060272e-33 -5.7448982375248304e-17
+		-0.78361162489122449 -4.7982373409884725e-17 0.78361162489122449
+		-1.1100856969603225e-16 -6.7857323231109171e-17 1.1081941875543884
+		0.78361162489122449 -4.7982373409884719e-17 0.78361162489122438
+		1.1081941875543881 -9.2536792101100989e-33 1.511240500779959e-16
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		;
+createNode transform -n "Tail_04_Ctrl_Grp" -p "Tail_03_Ctrl";
+	rename -uid "D3895536-4FB1-995C-91E6-A187FB86B2C9";
+	setAttr ".t" -type "double3" 0.15635405921151482 -4.4813181995668998 0 ;
+	setAttr ".r" -type "double3" -90 0 0 ;
+	setAttr ".s" -type "double3" 1.3333333333333333 1.3333333333333333 1.3333333333333333 ;
+createNode transform -n "Tail_04_Ctrl" -p "Tail_04_Ctrl_Grp";
+	rename -uid "47CD78E4-4025-5A12-B058-0F84262B7681";
+	setAttr ".t" -type "double3" -0.11726554440863612 0 4.686679986175994 ;
+	setAttr ".r" -type "double3" 90 0 0 ;
+	setAttr ".s" -type "double3" 0.75 0.75 0.75 ;
+createNode nurbsCurve -n "Tail_04_CtrlShape" -p "Tail_04_Ctrl";
+	rename -uid "9E80D3CA-461B-AE46-C287-C6A3EEFD5785";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		-1.1081941875543881 3.5177356190060272e-33 -5.7448982375248304e-17
+		-0.78361162489122449 -4.7982373409884725e-17 0.78361162489122449
+		-1.1100856969603225e-16 -6.7857323231109171e-17 1.1081941875543884
+		0.78361162489122449 -4.7982373409884719e-17 0.78361162489122438
+		1.1081941875543881 -9.2536792101100989e-33 1.511240500779959e-16
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		;
+createNode transform -n "Tail_05_Ctrl_Grp" -p "Tail_04_Ctrl";
+	rename -uid "12C03AA6-4F91-863D-411C-F7B791E55424";
+	setAttr ".t" -type "double3" 0.15635405921151482 -6.2489066482346587 0 ;
+	setAttr ".r" -type "double3" -90 0 0 ;
+	setAttr ".s" -type "double3" 1.3333333333333333 1.3333333333333333 1.3333333333333333 ;
+createNode transform -n "Tail_05_Ctrl" -p "Tail_05_Ctrl_Grp";
+	rename -uid "4153CD65-4EA3-87BB-9B6B-8B9D10FD93FA";
+	setAttr ".t" -type "double3" -0.11726554440863612 0 5.8379031124992382 ;
+	setAttr ".r" -type "double3" 90 0 0 ;
+	setAttr ".s" -type "double3" 0.75 0.75 0.75 ;
+createNode nurbsCurve -n "Tail_05_CtrlShape" -p "Tail_05_Ctrl";
+	rename -uid "B9FEC445-4A11-EBD3-4AD6-8DA0451AAFE9";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		-1.1081941875543881 3.5177356190060272e-33 -5.7448982375248304e-17
+		-0.78361162489122449 -4.7982373409884725e-17 0.78361162489122449
+		-1.1100856969603225e-16 -6.7857323231109171e-17 1.1081941875543884
+		0.78361162489122449 -4.7982373409884719e-17 0.78361162489122438
+		1.1081941875543881 -9.2536792101100989e-33 1.511240500779959e-16
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		;
+createNode transform -n "Snout_01_Ctrl_Grp1" -p "COG_Ctrl";
+	rename -uid "A020EC71-48A7-AE54-1848-9BAE05E2E05C";
+	setAttr ".t" -type "double3" 0.078177029605757412 -0.14383695381210193 0 ;
+	setAttr ".r" -type "double3" -90 0 0 ;
+	setAttr ".s" -type "double3" 0.66666666666666663 1 1 ;
+createNode transform -n "Snout_01_Ctrl" -p "Snout_01_Ctrl_Grp1";
+	rename -uid "3E0D52D5-4427-6BE4-145F-91B6DDDD31E5";
+	setAttr ".t" -type "double3" -0.11726554440863612 0 0.068890682110389179 ;
+	setAttr ".r" -type "double3" 90 0 0 ;
+	setAttr ".s" -type "double3" 1.75 1.25 1.25 ;
+createNode nurbsCurve -n "Snout_01_CtrlShape" -p "Snout_01_Ctrl";
+	rename -uid "6E613FF5-4320-4F4B-255A-4DB61D889AFE";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		-1.1081941875543881 3.5177356190060272e-33 -5.7448982375248304e-17
+		-0.78361162489122449 -4.7982373409884725e-17 0.78361162489122449
+		-1.1100856969603225e-16 -6.7857323231109171e-17 1.1081941875543884
+		0.78361162489122449 -4.7982373409884719e-17 0.78361162489122438
+		1.1081941875543881 -9.2536792101100989e-33 1.511240500779959e-16
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		;
+createNode transform -n "Snout_02_Ctrl_Grp" -p "Snout_01_Ctrl";
+	rename -uid "105CFE94-44A0-0D51-4FEC-BBA684A8C04E";
+	setAttr ".t" -type "double3" 0.067008882519220644 0.004844471673058859 0 ;
+	setAttr ".r" -type "double3" -90 0 0 ;
+	setAttr ".s" -type "double3" 0.5714285714285714 0.8 0.8 ;
+createNode transform -n "Snout_02_Ctrl" -p "Snout_02_Ctrl_Grp";
+	rename -uid "7723A57F-4ED9-97FB-A98B-8187E8B61D9E";
+	setAttr ".t" -type "double3" -0.054003130465441029 0 -3.0667859747977548 ;
+	setAttr ".r" -type "double3" 90 0 0 ;
+	setAttr ".s" -type "double3" 1.5 1 1 ;
+createNode nurbsCurve -n "Snout_02_CtrlShape" -p "Snout_02_Ctrl";
+	rename -uid "1C33AACF-474A-6FAA-45B7-839EA4590D7B";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		-1.1081941875543881 3.5177356190060272e-33 -5.7448982375248304e-17
+		-0.78361162489122449 -4.7982373409884725e-17 0.78361162489122449
+		-1.1100856969603225e-16 -6.7857323231109171e-17 1.1081941875543884
+		0.78361162489122449 -4.7982373409884719e-17 0.78361162489122438
+		1.1081941875543881 -9.2536792101100989e-33 1.511240500779959e-16
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		;
+createNode transform -n "Snout_03_Ctrl_Grp" -p "Snout_02_Ctrl";
+	rename -uid "FCD85289-4C01-30E8-C920-27939758B9D8";
+	setAttr ".t" -type "double3" 0.036002086976960682 3.0667859747977548 0 ;
+	setAttr ".r" -type "double3" -90 0 0 ;
+	setAttr ".s" -type "double3" 0.66666666666666663 1 1 ;
+createNode transform -n "Snout_03_Ctrl" -p "Snout_03_Ctrl_Grp";
+	rename -uid "D8BBBC4B-4C8F-5E5A-9D81-A2AE70161C4B";
+	setAttr ".t" -type "double3" -0.11726554440863612 0 -5.6112874057629938 ;
+	setAttr ".r" -type "double3" 90 0 0 ;
+	setAttr ".s" -type "double3" 0.75 0.75 0.75 ;
+createNode nurbsCurve -n "Snout_03_CtrlShape" -p "Snout_03_Ctrl";
+	rename -uid "43BFAD5D-4644-CA7C-A535-6E836227FE98";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		-1.1081941875543881 3.5177356190060272e-33 -5.7448982375248304e-17
+		-0.78361162489122449 -4.7982373409884725e-17 0.78361162489122449
+		-1.1100856969603225e-16 -6.7857323231109171e-17 1.1081941875543884
+		0.78361162489122449 -4.7982373409884719e-17 0.78361162489122438
+		1.1081941875543881 -9.2536792101100989e-33 1.511240500779959e-16
+		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
+		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
+		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "A909401A-494A-4500-8C71-988AF8788CFF";
 	setAttr -s 2 ".lnk";
@@ -898,6 +1168,81 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "23764E87-4318-D603-6CA8-A398AC7F4869";
 	setAttr ".b" -type "string" "playbackOptions -min 0 -max 360 -ast 0 -aet 360 ";
 	setAttr ".st" 6;
+createNode makeNurbCircle -n "makeNurbCircle1";
+	rename -uid "245840C4-461D-C478-492A-6EB0BD3DA7BF";
+	setAttr ".nr" -type "double3" 0 1 0 ;
+createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
+	rename -uid "837F13BE-41B6-7112-347C-7AA56E6DE7FF";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -785.71425449280639 -151.19047018270669 ;
+	setAttr ".tgi[0].vh" -type "double2" 757.14282705670462 80.952377735622477 ;
+	setAttr -s 22 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -1028.5714111328125;
+	setAttr ".tgi[0].ni[0].y" 55.714286804199219;
+	setAttr ".tgi[0].ni[0].nvs" 18304;
+	setAttr ".tgi[0].ni[1].x" -721.4285888671875;
+	setAttr ".tgi[0].ni[1].y" 55.714286804199219;
+	setAttr ".tgi[0].ni[1].nvs" 18304;
+	setAttr ".tgi[0].ni[2].x" -414.28570556640625;
+	setAttr ".tgi[0].ni[2].y" 105.71428680419922;
+	setAttr ".tgi[0].ni[2].nvs" 18304;
+	setAttr ".tgi[0].ni[3].x" -107.14286041259766;
+	setAttr ".tgi[0].ni[3].y" 105.71428680419922;
+	setAttr ".tgi[0].ni[3].nvs" 18304;
+	setAttr ".tgi[0].ni[4].x" 200;
+	setAttr ".tgi[0].ni[4].y" 105.71428680419922;
+	setAttr ".tgi[0].ni[4].nvs" 18304;
+	setAttr ".tgi[0].ni[5].x" 507.14285278320312;
+	setAttr ".tgi[0].ni[5].y" 105.71428680419922;
+	setAttr ".tgi[0].ni[5].nvs" 18304;
+	setAttr ".tgi[0].ni[6].x" 814.28570556640625;
+	setAttr ".tgi[0].ni[6].y" 105.71428680419922;
+	setAttr ".tgi[0].ni[6].nvs" 18304;
+	setAttr ".tgi[0].ni[7].x" 200;
+	setAttr ".tgi[0].ni[7].y" -38.571430206298828;
+	setAttr ".tgi[0].ni[7].nvs" 18304;
+	setAttr ".tgi[0].ni[8].x" 507.14285278320312;
+	setAttr ".tgi[0].ni[8].y" -38.571430206298828;
+	setAttr ".tgi[0].ni[8].nvs" 18304;
+	setAttr ".tgi[0].ni[9].x" 814.28570556640625;
+	setAttr ".tgi[0].ni[9].y" -38.571430206298828;
+	setAttr ".tgi[0].ni[9].nvs" 18304;
+	setAttr ".tgi[0].ni[10].x" -260;
+	setAttr ".tgi[0].ni[10].y" 8.5714282989501953;
+	setAttr ".tgi[0].ni[10].nvs" 18304;
+	setAttr ".tgi[0].ni[11].x" -490;
+	setAttr ".tgi[0].ni[11].y" 8.5714282989501953;
+	setAttr ".tgi[0].ni[11].nvs" 18304;
+	setAttr ".tgi[0].ni[12].x" -28.571428298950195;
+	setAttr ".tgi[0].ni[12].y" 8.5714282989501953;
+	setAttr ".tgi[0].ni[12].nvs" 18304;
+	setAttr ".tgi[0].ni[13].x" -107.14286041259766;
+	setAttr ".tgi[0].ni[13].y" 32.857143402099609;
+	setAttr ".tgi[0].ni[13].nvs" 18304;
+	setAttr ".tgi[0].ni[14].x" -107.14286041259766;
+	setAttr ".tgi[0].ni[14].y" 32.857143402099609;
+	setAttr ".tgi[0].ni[14].nvs" 18304;
+	setAttr ".tgi[0].ni[15].x" -107.14286041259766;
+	setAttr ".tgi[0].ni[15].y" 32.857143402099609;
+	setAttr ".tgi[0].ni[15].nvs" 18304;
+	setAttr ".tgi[0].ni[16].x" -107.14286041259766;
+	setAttr ".tgi[0].ni[16].y" 32.857143402099609;
+	setAttr ".tgi[0].ni[16].nvs" 18304;
+	setAttr ".tgi[0].ni[17].x" -107.14286041259766;
+	setAttr ".tgi[0].ni[17].y" 32.857143402099609;
+	setAttr ".tgi[0].ni[17].nvs" 18304;
+	setAttr ".tgi[0].ni[18].x" -107.14286041259766;
+	setAttr ".tgi[0].ni[18].y" 32.857143402099609;
+	setAttr ".tgi[0].ni[18].nvs" 18304;
+	setAttr ".tgi[0].ni[19].x" -107.14286041259766;
+	setAttr ".tgi[0].ni[19].y" 32.857143402099609;
+	setAttr ".tgi[0].ni[19].nvs" 18304;
+	setAttr ".tgi[0].ni[20].x" -107.14286041259766;
+	setAttr ".tgi[0].ni[20].y" -97.142860412597656;
+	setAttr ".tgi[0].ni[20].nvs" 18304;
+	setAttr ".tgi[0].ni[21].x" -107.14286041259766;
+	setAttr ".tgi[0].ni[21].y" 162.85714721679688;
+	setAttr ".tgi[0].ni[21].nvs" 18304;
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
@@ -936,6 +1281,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "polySplitRing5.out" "pCubeShape1.i";
 connectAttr "ROOT_Jnt.s" "COG_Jnt.is";
 connectAttr "COG_Jnt.s" "Tail_01_Jnt.is";
@@ -946,6 +1293,7 @@ connectAttr "Tail_04_Jnt.s" "Tail_05_Jnt.is";
 connectAttr "COG_Jnt.s" "Snout_01_Jnt.is";
 connectAttr "Snout_01_Jnt.s" "Snout_02_Jnt.is";
 connectAttr "Snout_02_Jnt.s" "Snout_03_Jnt.is";
+connectAttr "makeNurbCircle1.oc" "COG_CtrlShape.cr";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -969,6 +1317,37 @@ connectAttr "pCubeShape1.wm" "polySplitRing4.mp";
 connectAttr "polyExtrudeFace2.out" "polyTweak3.ip";
 connectAttr "polySplitRing4.out" "polySplitRing5.ip";
 connectAttr "pCubeShape1.wm" "polySplitRing5.mp";
+connectAttr "ROOT_Jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn";
+connectAttr "COG_Jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn";
+connectAttr "Tail_01_Jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn";
+connectAttr "Tail_02_Jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn";
+connectAttr "Tail_03_Jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn";
+connectAttr "Tail_04_Jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn";
+connectAttr "Tail_05_Jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn";
+connectAttr "Snout_01_Jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn";
+connectAttr "Snout_02_Jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn";
+connectAttr "Snout_03_Jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn";
+connectAttr "COG_Ctrl_Grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[10].dn";
+connectAttr "Tail_01_Ctrl_Grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+		;
+connectAttr "ROOT_Ctrl_Grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[12].dn";
+connectAttr "Tail_04_Ctrl_Grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+		;
+connectAttr "Tail_05_Ctrl_Grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+		;
+connectAttr "Tail_03_Ctrl_Grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
+		;
+connectAttr "Snout_03_Ctrl_Grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
+		;
+connectAttr "Snout_02_Ctrl_Grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
+		;
+connectAttr "Tail_02_Ctrl_Grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
+		;
+connectAttr "Snout_01_Ctrl_Grp1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
+		;
+connectAttr "Snout_01_Ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[20].dn";
+connectAttr "Snout_01_CtrlShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
+		;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of Crocy.ma
