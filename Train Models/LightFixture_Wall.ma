@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: LightFixture_Wall.ma
-//Last modified: Thu, Feb 23, 2023 08:07:26 PM
+//Last modified: Thu, Feb 23, 2023 08:07:46 PM
 //Codeset: 1252
 requires maya "2023";
 requires "mtoa" "5.1.2";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202205052215-234554116d";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 22621)";
-fileInfo "UUID" "64BE8B13-4CBE-1482-3B29-8C9428F1F8BA";
+fileInfo "UUID" "0B722032-4E04-4FB3-7D77-118C15923BE3";
 createNode transform -s -n "persp";
 	rename -uid "4E04C2A0-4287-6DAC-B59C-429983917144";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.1335211864245025 1.6270004833639211 13.423083580360705 ;
+	setAttr ".t" -type "double3" -3.2438646734292758 1.3597043245814631 20.764887749482082 ;
 	setAttr ".r" -type "double3" 2.0616472703197619 351.39999999996968 2.5130642820857229e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "EBD62D9A-48C4-EBE1-4BE0-81ADD587A37E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 14.969755922928877;
+	setAttr ".coi" 22.39985675356111;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
